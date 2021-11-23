@@ -11,13 +11,16 @@ If now slots are set yet, each day **must** have an empty array.
 
 ```json
 {
-    "MO": [],
-    "TU": [],
-    "WE": [],
-    "TH": [],
-    "FR": [],
-    "SA": [],
-    "SU": [],
+    "timezoneId": "Europe/Berlin",
+    "slots": {
+        "MO": [],
+        "TU": [],
+        "WE": [],
+        "TH": [],
+        "FR": [],
+        "SA": [],
+        "SU": [],
+    }
 }
 ```
 
@@ -27,27 +30,30 @@ The following example shows a Mo-Fr 9-5 schedule.
 
 ```json
 {
-    "MO": [
-        "start": 1637568000,
-        "end": 1637596800,
-    ],
-    "TU": [
-        "start": 1637568000,
-        "end": 1637596800,
-    ],
-    "WE": [
-        "start": 1637568000,
-        "end": 1637596800,
-    ],
-    "TH": [
-        "start": 1637568000,
-        "end": 1637596800,
-    ],
-    "FR": [
-        "start": 1637568000,
-        "end": 1637596800,
-    ],
-    "SA": [],
-    "SU": [],
+    "timezoneId": "Europe/Berlin",
+    "slots":{
+        "MO": [
+            "start": 1637568000,
+            "end": 1637596800,
+        ],
+        "TU": [
+            "start": 1637568000,
+            "end": 1637596800,
+        ],
+        "WE": [
+            "start": 1637568000,
+            "end": 1637596800,
+        ],
+        "TH": [
+            "start": 1637568000,
+            "end": 1637596800,
+        ],
+        "FR": [
+            "start": 1637568000,
+            "end": 1637596800,
+        ],
+        "SA": [],
+        "SU": [],
+    }
 }
 ```
