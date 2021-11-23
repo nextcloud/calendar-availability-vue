@@ -26,6 +26,11 @@
     "url": "https://github.com/nextcloud/calendar-availability-vue/issues"
   },
   "homepage": "https://github.com/nextcloud/calendar-availability-vue#readme",
+  "dependencies": {
+    "ical.js": "^1.4.0",
+    "icalzone": "^0.0.1",
+    "uuid": "^8.3.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",

@@ -28,7 +28,8 @@ export default {
     postcss(),
     commonjs(),
     babel({
-      babelHelpers: 'bundled'
+      babelHelpers: 'bundled',
+      presets: ["@babel/preset-env"]
     })
   ]
 }
