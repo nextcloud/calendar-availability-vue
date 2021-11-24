@@ -7,7 +7,7 @@ The following data structure is used in the front-end. There are helpers to conv
 
 ### Empty slots
 
-If now slots are set yet, each day **must** have an empty array.
+If no slots are set yet, each day **must** have an empty array.
 
 ```json
 {
@@ -26,31 +26,61 @@ If now slots are set yet, each day **must** have an empty array.
 
 ### Real world example
 
-The following example shows a Mo-Fr 9-5 schedule.
+The following example shows a Mo-Fr schedule.
 
 ```json
 {
     "timezoneId": "Europe/Berlin",
     "slots":{
         "MO": [
-            "start": 1637568000,
-            "end": 1637596800,
+            {
+                "start": 1637568000,
+                "end": 1637578800,
+            },
+            {
+                "start": 1637582400,
+                "end": 1637596800,
+            }
         ],
         "TU": [
-            "start": 1637568000,
-            "end": 1637596800,
+            {
+                "start": 1637568000,
+                "end": 1637578800,
+            },
+            {
+                "start": 1637582400,
+                "end": 1637596800,
+            }
         ],
         "WE": [
-            "start": 1637568000,
-            "end": 1637596800,
+            {
+                "start": 1637568000,
+                "end": 1637578800,
+            },
+            {
+                "start": 1637582400,
+                "end": 1637596800,
+            }
         ],
         "TH": [
-            "start": 1637568000,
-            "end": 1637596800,
+            {
+                "start": 1637568000,
+                "end": 1637578800,
+            },
+            {
+                "start": 1637582400,
+                "end": 1637596800,
+            }
         ],
         "FR": [
-            "start": 1637568000,
-            "end": 1637596800,
+                        {
+                "start": 1637568000,
+                "end": 1637578800,
+            },
+            {
+                "start": 1637582400,
+                "end": 1637589600,
+            }
         ],
         "SA": [],
         "SU": [],
