@@ -1,6 +1,6 @@
 <template>
 	<div class="grid-table">
-		<template v-for="day in daysOfTheWeek">
+		<template v-for="day in internalSlots">
 			<div :key="`day-label-${day.id}`" class="label-weekday">
 				{{ day.displayName }}
 			</div>
@@ -10,6 +10,7 @@
 						<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
 							<DatetimePicker
 								v-model="slot.start"
+								@change="onChangeSlots"
 								type="time"
 								class="start-date"
 								format="H:mm" />
@@ -18,13 +19,14 @@
 							</span>
 							<DatetimePicker
 								v-model="slot.end"
+								@change="onChangeSlots"
 								type="time"
 								class="end-date"
 								format="H:mm" />
 							<button :key="`slot-${day.id}-${idx}-btn`"
 								class="icon-delete delete-slot button"
 								:title="l10nDeleteSlot"
-								@click="$emit('deleteSlot', day, idx)" />
+								@click="removeSlot(day, idx)" />
 						</div>
 					</template>
 				</div>
@@ -37,7 +39,7 @@
 				:disabled="loading"
 				class="icon-add add-another button"
 				:title="l10nAddSlot"
-				@click="$emit('addSlot', day)" />
+				@click="addSlot(day)" />
 		</template>
 	</div>
 </template>
@@ -105,49 +107,96 @@ export default {
 			required: true,
 		},
 	},
-	computed: {
-		daysOfTheWeek() {
+	data() {
+		return {
+			internalSlots: this.slotsToInternalData(this.slots)
+		}
+	},
+	watch: {
+		slots() {
+			this.internalSlots = this.slotsToInternalData(this.slots)
+		},
+	},
+	methods: {
+		timeStampSlotsToDateObjectSlots(slots) {
+			return slots.map(slot => ({
+				start: new Date(slot.start * 1000),
+				end: new Date(slot.end * 1000),
+			}))
+		},
+		slotsToInternalData() {
 			const moToSa = [
 				{
 					id: 'MO',
 					displayName: this.l10nMonday,
-					slots: this.slots.MO,
+					slots: this.timeStampSlotsToDateObjectSlots(this.slots.MO),
 				},
 				{
 					id: 'TU',
 					displayName: this.l10nTuesday,
-					slots: this.slots.TU,
+					slots: this.timeStampSlotsToDateObjectSlots(this.slots.TU),
 				},
 				{
 					id: 'WE',
 					displayName: this.l10nWednesday,
-					slots: this.slots.WE,
+					slots: this.timeStampSlotsToDateObjectSlots(this.slots.WE),
 				},
 				{
 					id: 'TH',
 					displayName: this.l10nThursday,
-					slots: this.slots.TH,
+					slots: this.timeStampSlotsToDateObjectSlots(this.slots.TH),
 				},
 				{
 					id: 'FR',
 					displayName: this.l10nFriday,
-					slots: this.slots.FR,
+					slots: this.timeStampSlotsToDateObjectSlots(this.slots.FR),
 				},
 				{
 					id: 'SA',
 					displayName: this.l10nSaturday,
-					slots: this.slots.SA,
+					slots: this.timeStampSlotsToDateObjectSlots(this.slots.SA),
 				},
 			]
 			const sunday = {
 				id: 'SU',
 				displayName: this.l10nSunday,
-				slots: this.slots.SU,
+				slots: this.timeStampSlotsToDateObjectSlots(this.slots.SU),
 			}
 
 			return getFirstDay() === 1 ? [...moToSa, sunday] : [sunday, ...moToSa]
 		},
-	},
+		internalDataToSlots() {
+			const converted = {}
+			this.internalSlots.forEach(({id, slots}) => {
+				converted[id] = slots.map(slot => ({
+					start: Math.round(slot.start.getTime() / 1000),
+					end: Math.round(slot.end.getTime() / 1000),
+				}))
+			})
+			return converted
+		},
+		addSlot(day) {
+			const start = new Date()
+			start.setHours(9, 0, 0, 0)
+			const end = new Date()
+			end.setHours(17, 0, 0, 0)
+
+			day.slots.push({
+				start,
+				end,
+			})
+
+			this.onChangeSlots()
+		},
+		removeSlot(day, idx) {
+			day.slots.splice(idx, 1)
+
+			this.onChangeSlots()
+		},
+		onChangeSlots() {
+			this.$emit('update:slots', this.internalDataToSlots())
+		}
+	}
 }
 </script>
 
