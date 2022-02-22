@@ -23,5 +23,5 @@ import { getLoggerBuilder } from '@nextcloud/logger'
 
 export default getLoggerBuilder()
 	.detectUser()
-	.setApp('@nextcloud/vue')
+	.setApp('@nextcloud/calendar-availability-vue')
 	.build()
