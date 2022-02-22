@@ -87,3 +87,15 @@ The following example shows a Mo-Fr schedule.
     }
 }
 ```
+
+## Development setup
+
+If you want to work on improving the components it’s best to run the latest code and link it to your local Nextcloud installation:
+
+1. Install the dependencies with `npm ci`
+2. Build the components every time you do changes: `npm run build`
+3. Connect it to your local Nextcloud development setup:
+    - In this repository do `npm link`
+    - In the repository of an app do `npm link @nextcloud/calendar-availability-vue` (you need to re-link any time you do `npm ci` in the app)
+4. Then build the app with: `npm run build` (or watch for changes with `npm run watch`)
+
