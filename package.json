@@ -7,7 +7,9 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/nextcloud/calendar-availability-vue#readme",
   "dependencies": {
+    "@nextcloud/logger": "^2.4.0",
     "ical.js": "^1.4.0",
     "icalzone": "^0.0.1",
     "uuid": "^8.3.2"
@@ -35,13 +38,12 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@nextcloud/browserslist-config": "^2.2.0",
-    "@nextcloud/eslint-plugin": "^2.0.0",
+    "@nextcloud/eslint-config": "^8.2.0",
     "@nextcloud/l10n": "^1.4.1",
     "@nextcloud/vue": "^6.0 || ^7.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
-    "eslint": "^8.2.0",
     "postcss": "^8.3.11",
     "rollup": "^2.60.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
