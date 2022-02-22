@@ -1,8 +1,0 @@
-{
-    "extends": [
-        "plugin:nextcloud/recommended"
-    ],
-    "rules": {
-        "vue/no-v-for-template-key": "off"
-    }
-}
