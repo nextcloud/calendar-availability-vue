@@ -10,7 +10,7 @@ module.exports = {
 	extends: [
 		'@nextcloud',
 	],
-	plugins: [
-		'cypress',
-	],
+	rules: {
+		'no-console': 'off',
+	},
 }
