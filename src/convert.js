@@ -1,6 +1,7 @@
 import { getZoneString } from 'icalzone'
 import { parse as parseIcal, Component } from 'ical.js'
 import { v4 as uuidv4 } from 'uuid'
+import logger from './utils/logger.js'
 
 export function getEmptySlots() {
 	return {
@@ -15,7 +16,7 @@ export function getEmptySlots() {
 }
 
 export function vavailabilityToSlots(vavailability) {
-    const parsedIcal = parseIcal(vavailability)
+	const parsedIcal = parseIcal(vavailability)
 
 	const vcalendarComp = new Component(parsedIcal)
 	const vavailabilityComp = vcalendarComp.getFirstSubcomponent('vavailability')
@@ -56,7 +57,7 @@ export function vavailabilityToSlots(vavailability) {
 }
 
 export function slotsToVavailability(slots, timezoneId) {
-    const vcalendarComp = new ICAL.Component('vcalendar')
+	const vcalendarComp = new ICAL.Component('vcalendar')
 	vcalendarComp.addPropertyWithValue('prodid', 'Nextcloud DAV app')
 
 	// Store time zone info
@@ -125,5 +126,5 @@ export function slotsToVavailability(slots, timezoneId) {
 
 	vcalendarComp.addSubcomponent(vavailabilityComp)
 
-    return vcalendarComp.toString()
+	return vcalendarComp.toString()
 }
