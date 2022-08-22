@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import NcDatetimePicker from '@nextcloud/vue/dist/Components/DatetimePicker'
+import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker'
 import { getFirstDay } from '@nextcloud/l10n'
 
 export default {
