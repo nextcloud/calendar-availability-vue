@@ -8,7 +8,7 @@
 				<div class="availability-slot-group">
 					<template v-for="(slot, idx) in day.slots">
 						<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
-							<DatetimePicker
+							<NcDatetimePicker
 								v-model="slot.start"
 								@change="onChangeSlots"
 								type="time"
@@ -17,7 +17,7 @@
 							<span class="to-text">
 								{{ l10nTo }}
 							</span>
-							<DatetimePicker
+							<NcDatetimePicker
 								v-model="slot.end"
 								@change="onChangeSlots"
 								type="time"
@@ -45,13 +45,13 @@
 </template>
 
 <script>
-import DatetimePicker from '@nextcloud/vue/dist/Components/DatetimePicker'
+import NcDatetimePicker from '@nextcloud/vue/dist/Components/DatetimePicker'
 import { getFirstDay } from '@nextcloud/l10n'
 
 export default {
 	name: 'CalendarAvailability',
 	components: {
-		DatetimePicker,
+		NcDatetimePicker,
 	},
 	props: {
 		slots: {
