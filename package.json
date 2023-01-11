@@ -42,7 +42,7 @@
     "@nextcloud/l10n": "^1.4.1",
     "@nextcloud/vue": "^6.0 || ^7.0",
     "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "postcss": "^8.3.11",
     "rollup": "^2.60.0",
