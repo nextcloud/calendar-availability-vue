@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.5.0 – unreleased
+### Changed
+* Update @nextcloud/vue to v7
+* Dependency updates
+
 ## 0.4.0 - 2022-08-11
 
 * Add bug and feature form by @GretaD in https://github.com/nextcloud/calendar-availability-vue/pull/20
