@@ -1,5 +1,11 @@
 # calendar-availability-vue
+
 Weekly calendar availability component for Nextcloud apps
+
+## Maintainers
+
+* [ChristophWurst](https://github.com/ChristophWurst)
+* [st3iny](https://github.com/st3iny)
 
 ## Slots data structure
 
