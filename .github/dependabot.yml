@@ -13,8 +13,13 @@ updates:
       timezone: Europe/Paris
     open-pull-requests-limit: 10
     labels:
-      - "3. to review"
       - "dependencies"
+    reviewers:
+    - ChristophWurst
+    - st3iny
+    commit-message:
+      prefix: chore
+      include: scope
 
   - package-ecosystem: github-actions
     directory: "/"
@@ -22,5 +27,10 @@ updates:
       interval: daily
       timezone: Europe/Paris
     labels:
-      - "3. to review"
       - "dependencies"
+    reviewers:
+      - ChristophWurst
+      - st3iny
+    commit-message:
+      prefix: chore
+      include: scope
