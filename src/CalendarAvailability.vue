@@ -8,21 +8,19 @@
 				<div class="availability-slot-group">
 					<template v-for="(slot, idx) in day.slots">
 						<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
-							<NcDatetimePicker
-								v-model="slot.start"
-								@change="onChangeSlots"
+							<NcDatetimePicker v-model="slot.start"
 								type="time"
 								class="start-date"
-								format="H:mm" />
+								format="H:mm"
+								@change="onChangeSlots" />
 							<span class="to-text">
 								{{ l10nTo }}
 							</span>
-							<NcDatetimePicker
-								v-model="slot.end"
-								@change="onChangeSlots"
+							<NcDatetimePicker v-model="slot.end"
 								type="time"
 								class="end-date"
-								format="H:mm" />
+								format="H:mm"
+								@change="onChangeSlots" />
 							<button :key="`slot-${day.id}-${idx}-btn`"
 								class="icon-delete delete-slot button"
 								:title="l10nDeleteSlot"
@@ -45,7 +43,7 @@
 </template>
 
 <script>
-import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker'
+import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker.js'
 import { getFirstDay } from '@nextcloud/l10n'
 
 export default {
@@ -109,7 +107,7 @@ export default {
 	},
 	data() {
 		return {
-			internalSlots: this.slotsToInternalData(this.slots)
+			internalSlots: this.slotsToInternalData(this.slots),
 		}
 	},
 	watch: {
@@ -167,7 +165,7 @@ export default {
 		},
 		internalDataToSlots() {
 			const converted = {}
-			this.internalSlots.forEach(({id, slots}) => {
+			this.internalSlots.forEach(({ id, slots }) => {
 				converted[id] = slots.map(slot => ({
 					start: Math.round(slot.start.getTime() / 1000),
 					end: Math.round(slot.end.getTime() / 1000),
@@ -195,8 +193,8 @@ export default {
 		},
 		onChangeSlots() {
 			this.$emit('update:slots', this.internalDataToSlots())
-		}
-	}
+		},
+	},
 }
 </script>
 
