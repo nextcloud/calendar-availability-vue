@@ -21,10 +21,14 @@
 								class="end-date"
 								format="H:mm"
 								@change="onChangeSlots" />
-							<button :key="`slot-${day.id}-${idx}-btn`"
-								class="icon-delete delete-slot button"
+							<Button :key="`slot-${day.id}-${idx}-btn`"
+								class="delete-slot button"
 								:title="l10nDeleteSlot"
-								@click="removeSlot(day, idx)" />
+								@click="removeSlot(day, idx)">
+								<template #icon>
+									<IconDelete :size="20" />
+								</template>
+							</Button>
 						</div>
 					</template>
 				</div>
@@ -33,23 +37,34 @@
 					{{ l10nEmptyDay }}
 				</span>
 			</div>
-			<button :key="`add-slot-${day.id}`"
+			<Button :key="`add-slot-${day.id}`"
 				:disabled="loading"
-				class="icon-add add-another button"
+				class="add-another button"
 				:title="l10nAddSlot"
-				@click="addSlot(day)" />
+				@click="addSlot(day)">
+				<template #icon>
+					<IconAdd :size="20" />
+				</template>
+			</Button>
 		</template>
 	</div>
 </template>
 
 <script>
-import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker.js'
+
+import DatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker'
+import Button from '@nextcloud/vue/dist/Components/NcButton'
+import IconAdd from 'vue-material-design-icons/Plus'
+import IconDelete from 'vue-material-design-icons/Delete'
 import { getFirstDay } from '@nextcloud/l10n'
 
 export default {
 	name: 'CalendarAvailability',
 	components: {
-		NcDatetimePicker,
+		DatetimePicker,
+		Button,
+		IconAdd,
+		IconDelete,
 	},
 	props: {
 		slots: {
