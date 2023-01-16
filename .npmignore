@@ -1,5 +1,5 @@
 /.github
 /src
 /*.tgz
-rollup.config.js
+vite.config.js
 .eslintrc*
