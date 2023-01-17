@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.5.0 – unreleased
+## 0.5.0 – 2023-01-17
 ### Changed
 * Update @nextcloud/l10n to v2
 * Update @nextcloud/vue to v7
