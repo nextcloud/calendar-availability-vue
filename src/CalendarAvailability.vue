@@ -52,7 +52,7 @@
 
 <script>
 
-import DatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker'
+import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker'
 import Button from '@nextcloud/vue/dist/Components/NcButton'
 import IconAdd from 'vue-material-design-icons/Plus'
 import IconDelete from 'vue-material-design-icons/Delete'
@@ -61,7 +61,7 @@ import { getFirstDay } from '@nextcloud/l10n'
 export default {
 	name: 'CalendarAvailability',
 	components: {
-		DatetimePicker,
+		NcDatetimePicker,
 		Button,
 		IconAdd,
 		IconDelete,
