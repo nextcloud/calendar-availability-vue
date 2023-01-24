@@ -33,7 +33,8 @@
     "@nextcloud/logger": "^2.4.0",
     "ical.js": "^1.4.0",
     "icalzone": "^0.0.1",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vue-material-design-icons": "^5.1.2"
   },
   "devDependencies": {
     "@nextcloud/browserslist-config": "^2.2.0",
