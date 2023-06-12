@@ -3,8 +3,7 @@
   "version": "0.6.0-alpha1",
   "description": "Weekly calendar availability component for Nextcloud apps",
   "type": "module",
-  "main": "dist/index.umd.cjs",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "vite build",
     "watch": "vite build --watch",
