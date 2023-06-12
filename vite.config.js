@@ -17,14 +17,10 @@ export default defineConfig({
       entry: 'src/index.js',
       name: packageJson.name,
       fileName: 'index',
+      formats: ['es']
     },
     rollupOptions: {
-      external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue',
-        },
-      },
-    },
+      external: Object.keys(packageJson.peerDependencies)
+    }
   },
 })

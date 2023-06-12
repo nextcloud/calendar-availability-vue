@@ -51,8 +51,7 @@
 </template>
 
 <script>
-import NcDatetimePicker from '@nextcloud/vue/dist/Components/NcDatetimePicker.js'
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import { NcDatetimePicker, NcButton } from '@nextcloud/vue'
 import IconDelete from 'vue-material-design-icons/Delete.vue'
 import IconAdd from 'vue-material-design-icons/Plus.vue'
 
