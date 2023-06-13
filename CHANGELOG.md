@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.0
+### Changed
+* Drop legacy UMD bundle
+
 ## 0.6.1
 ### Changed
 * Migrate from rollup to Vite
