@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.0-beta.1
+### Changed
+* Bump @nextcloud/vue peer dependency to >=8.0.0-beta.0
+### Removed
+* Support for @nextcloud/vue v6 and v7
+
 ## 1.0.0
 ### Changed
 * Drop legacy UMD bundle
