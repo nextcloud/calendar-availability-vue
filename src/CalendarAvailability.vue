@@ -8,18 +8,16 @@
 				<div class="availability-slot-group">
 					<template v-for="(slot, idx) in day.slots">
 						<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
-							<NcDateTimePicker v-model="slot.start"
+							<NcDateTimePickerNative :value.sync="slot.start"
 								type="time"
 								class="start-date"
-								format="H:mm"
 								@change="onChangeSlots" />
 							<span class="to-text">
 								{{ l10nTo }}
 							</span>
-							<NcDateTimePicker v-model="slot.end"
+							<NcDateTimePickerNative :value.sync="slot.end"
 								type="time"
 								class="end-date"
-								format="H:mm"
 								@change="onChangeSlots" />
 							<NcButton :key="`slot-${day.id}-${idx}-btn`"
 								class="icon-delete delete-slot button"
@@ -51,7 +49,7 @@
 </template>
 
 <script>
-import { NcDateTimePicker, NcButton } from '@nextcloud/vue'
+import { NcDateTimePickerNative, NcButton } from '@nextcloud/vue'
 import IconDelete from 'vue-material-design-icons/Delete.vue'
 import IconAdd from 'vue-material-design-icons/Plus.vue'
 
@@ -60,7 +58,7 @@ import { getFirstDay } from '@nextcloud/l10n'
 export default {
 	name: 'CalendarAvailability',
 	components: {
-		NcDateTimePicker,
+		NcDateTimePickerNative,
 		NcButton,
 		IconAdd,
 		IconDelete,
