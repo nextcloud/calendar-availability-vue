@@ -1,6 +1,6 @@
 {
   "name": "@nextcloud/calendar-availability-vue",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Weekly calendar availability component for Nextcloud apps",
   "type": "module",
   "main": "dist/index.js",
