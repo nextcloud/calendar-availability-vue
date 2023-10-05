@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.0-beta.2
+### Changed
+* Bump @nextcloud/vue peer dependency to >=8.0.0-beta.7
+* Dependencies updates
+### Removed
+* Support for @nextcloud/vue v8.0.0-beta.1 .. v8.0.0-beta.6
+
 ## 2.0.0-beta.1
 ### Changed
 * Bump @nextcloud/vue peer dependency to >=8.0.0-beta.0
