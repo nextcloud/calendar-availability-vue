@@ -2,7 +2,7 @@
 	<div class="grid-table">
 		<template v-for="day in internalSlots">
 			<div :key="`day-label-${day.id}`" class="label-weekday">
-				{{ day.displayName }}
+				<span>{{ day.displayName }}</span>
 			</div>
 			<div :key="`day-slots-${day.id}`" class="availability-slots">
 				<div class="availability-slot-group">
@@ -22,7 +22,8 @@
 								format="H:mm"
 								@change="onChangeSlots" />
 							<NcButton :key="`slot-${day.id}-${idx}-btn`"
-								class="icon-delete delete-slot button"
+								type="tertiary"
+								class="button"
 								:title="l10nDeleteSlot"
 								@click="removeSlot(day, idx)">
 								<template #icon>
@@ -255,19 +256,15 @@ export default {
 }
 .label-weekday {
 	position: relative;
-	display: inline-flex;
-	padding-top: 4px;
-}
-.delete-slot {
-	background-color: transparent;
-	border: none;
-	padding-bottom: 12px;
-	opacity: .5;
-	&:hover {
-		opacity: 1;
+	display: flex;
+	align-items: flex-start;
+
+	> span {
+		height: 50px;
+		display: flex;
+		align-items: center;
 	}
 }
-
 .add-another {
 	background-color: transparent;
 	border: none;
@@ -289,7 +286,8 @@ export default {
 }
 .empty-content {
 	color: var(--color-text-lighter);
-	margin-top: 4px;
+	display: inline-flex;
+	align-items: center;
 }
 
 </style>
