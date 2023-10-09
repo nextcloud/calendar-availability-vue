@@ -15,6 +15,11 @@ All notable changes to this project will be documented in this file.
 ### Removed
 * Support for @nextcloud/vue v6 and v7
 
+## 1.0.1 - 2023-10-09
+### Fixed
+* Form alignment
+* Delete button styling
+
 ## 1.0.0
 ### Changed
 * Drop legacy UMD bundle
