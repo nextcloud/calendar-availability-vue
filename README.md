@@ -7,6 +7,13 @@ Weekly calendar availability component for Nextcloud apps
 * [ChristophWurst](https://github.com/ChristophWurst)
 * [st3iny](https://github.com/st3iny)
 
+## Compatibility matrix
+
+`@nextcloud/calendar-availability-vue` | `@nextcloud/vue`
+---------------------------------------|-----------------
+1.x.x                                  | 6.x.x. and 7.x.x
+2.x.x                                  | 8.x.x
+
 ## Slots data structure
 
 The following data structure is used in the front-end. There are helpers to converts from the ical `VAVAILABILITY` structure to this custom structure and back.
