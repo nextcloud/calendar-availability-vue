@@ -8,22 +8,27 @@
 				<div class="availability-slot-group">
 					<template v-for="(slot, idx) in day.slots">
 						<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
-							<NcDateTimePicker v-model="slot.start"
+							<NcDateTimePickerNative :id="`start-${day.id}-${idx}`"
+								v-model="slot.start"
 								type="time"
+								:label="l10nStartPickerLabel?.(day.displayName)"
+								:hide-label="true"
 								class="start-date"
-								format="H:mm"
 								@change="onChangeSlots" />
 							<span class="to-text">
 								{{ l10nTo }}
 							</span>
-							<NcDateTimePicker v-model="slot.end"
+							<NcDateTimePickerNative :id="`end-${day.id}-${idx}`"
+								v-model="slot.end"
 								type="time"
+								:label="l10nEndPickerLabel?.(day.displayName)"
+								:hide-label="true"
 								class="end-date"
-								format="H:mm"
 								@change="onChangeSlots" />
 							<NcButton :key="`slot-${day.id}-${idx}-btn`"
 								type="tertiary"
 								class="button"
+								:aria-label="l10nDeleteSlot"
 								:title="l10nDeleteSlot"
 								@click="removeSlot(day, idx)">
 								<template #icon>
@@ -42,6 +47,7 @@
 				:disabled="loading"
 				class="add-another button"
 				:title="l10nAddSlot"
+				:aria-label="l10nAddSlot"
 				@click="addSlot(day)">
 				<template #icon>
 					<IconAdd :size="20" />
@@ -52,7 +58,8 @@
 </template>
 
 <script>
-import { NcDateTimePicker, NcButton } from '@nextcloud/vue'
+import NcDateTimePickerNative from '@nextcloud/vue/dist/Components/NcDateTimePickerNative.js'
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 import IconDelete from 'vue-material-design-icons/Delete.vue'
 import IconAdd from 'vue-material-design-icons/Plus.vue'
 
@@ -61,7 +68,7 @@ import { getFirstDay } from '@nextcloud/l10n'
 export default {
 	name: 'CalendarAvailability',
 	components: {
-		NcDateTimePicker,
+		NcDateTimePickerNative,
 		NcButton,
 		IconAdd,
 		IconDelete,
@@ -118,6 +125,14 @@ export default {
 		l10nSunday: {
 			type: String,
 			required: true,
+		},
+		l10nStartPickerLabel: {
+			type: Function,
+			default: (dayName) => `Pick a start time for ${dayName}`,
+		},
+		l10nEndPickerLabel: {
+			type: Function,
+			default: (dayName) => `Pick a end time for ${dayName}`,
 		},
 	},
 	data() {
@@ -289,5 +304,7 @@ export default {
 	display: inline-flex;
 	align-items: center;
 }
-
+.start-date {
+	padding-right: 12px;
+}
 </style>
