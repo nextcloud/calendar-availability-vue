@@ -1,60 +1,62 @@
 <template>
-	<div class="grid-table">
+	<ul class="week-day-container">
 		<template v-for="day in internalSlots">
-			<div :key="`day-label-${day.id}`" class="label-weekday">
-				<span>{{ day.displayName }}</span>
-			</div>
-			<div :key="`day-slots-${day.id}`" class="availability-slots">
-				<div class="availability-slot-group">
-					<template v-for="(slot, idx) in day.slots">
-						<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
-							<NcDateTimePickerNative :id="`start-${day.id}-${idx}`"
-								v-model="slot.start"
-								type="time"
-								:label="l10nStartPickerLabel?.(day.displayName)"
-								:hide-label="true"
-								class="start-date"
-								@change="onChangeSlots" />
-							<span class="to-text">
-								{{ l10nTo }}
-							</span>
-							<NcDateTimePickerNative :id="`end-${day.id}-${idx}`"
-								v-model="slot.end"
-								type="time"
-								:label="l10nEndPickerLabel?.(day.displayName)"
-								:hide-label="true"
-								class="end-date"
-								@change="onChangeSlots" />
-							<NcButton :key="`slot-${day.id}-${idx}-btn`"
-								type="tertiary"
-								class="button"
-								:aria-label="l10nDeleteSlot"
-								:title="l10nDeleteSlot"
-								@click="removeSlot(day, idx)">
-								<template #icon>
-									<IconDelete :size="20" />
-								</template>
-							</NcButton>
-						</div>
-					</template>
+			<li :key="`day-label-${day.id}`" class="day-container" :aria-labelledby="day.displayName + '-label'">
+				<div class="label-weekday">
+					<span :id="day.displayName + '-label'">{{ day.displayName }}</span>
 				</div>
-				<span v-if="day.slots.length === 0"
-					class="empty-content">
-					{{ l10nEmptyDay }}
-				</span>
-			</div>
-			<NcButton :key="`add-slot-${day.id}`"
-				:disabled="loading"
-				class="add-another button"
-				:title="l10nAddSlot"
-				:aria-label="l10nAddSlot"
-				@click="addSlot(day)">
-				<template #icon>
-					<IconAdd :size="20" />
-				</template>
-			</NcButton>
+				<div :key="`day-slots-${day.id}`" class="availability-slots">
+					<div class="availability-slot-group">
+						<template v-for="(slot, idx) in day.slots">
+							<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
+								<NcDateTimePickerNative :id="`start-${day.id}-${idx}`"
+									v-model="slot.start"
+									type="time"
+									:label="l10nStartPickerLabel?.(day.displayName)"
+									:hide-label="true"
+									class="start-date"
+									@change="onChangeSlots" />
+								<span class="to-text">
+									{{ l10nTo }}
+								</span>
+								<NcDateTimePickerNative :id="`end-${day.id}-${idx}`"
+									v-model="slot.end"
+									type="time"
+									:label="l10nEndPickerLabel?.(day.displayName)"
+									:hide-label="true"
+									class="end-date"
+									@change="onChangeSlots" />
+								<NcButton :key="`slot-${day.id}-${idx}-btn`"
+									type="tertiary"
+									class="button"
+									:aria-label="l10nDeleteSlot"
+									:title="l10nDeleteSlot"
+									@click="removeSlot(day, idx)">
+									<template #icon>
+										<IconDelete :size="20" />
+									</template>
+								</NcButton>
+							</div>
+						</template>
+					</div>
+					<span v-if="day.slots.length === 0"
+						class="empty-content">
+						{{ l10nEmptyDay }}
+					</span>
+				</div>
+				<NcButton :key="`add-slot-${day.id}`"
+					:disabled="loading"
+					class="add-another button"
+					:title="l10nAddSlot"
+					:aria-label="l10nAddSlot"
+					@click="addSlot(day)">
+					<template #icon>
+						<IconAdd :size="20" />
+					</template>
+				</NcButton>
+			</li>
 		</template>
-	</div>
+	</ul>
 </template>
 
 <script>
@@ -234,7 +236,10 @@ export default {
 	position: absolute;
 }
 .availability-slots {
+	max-width: 332px;
+	width: 100%;
 	display: flex;
+	justify-content: flex-start;
 	white-space: nowrap;
 }
 .availability-slot {
@@ -259,12 +264,15 @@ export default {
 .time-zone {
 	padding: 32px 12px 12px 0;
 }
-.grid-table {
-	display: grid;
+.week-day-container {
+	box-sizing: border-box;
 	margin-bottom: 32px;
-	grid-column-gap: 24px;
-	grid-row-gap: 6px;
-	grid-template-columns: min-content min-content min-content;
+	max-width: 500px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6px;
 }
 .button {
 	align-self: flex-end;
@@ -273,6 +281,8 @@ export default {
 	position: relative;
 	display: flex;
 	align-items: flex-start;
+	min-width: 77px;
+	width: 77px;
 
 	> span {
 		height: 50px;
@@ -306,5 +316,11 @@ export default {
 }
 .start-date {
 	padding-right: 12px;
+}
+.day-container {
+	display: flex;
+	max-width: 500px;
+	width: 100%;
+	gap: 24px;
 }
 </style>
