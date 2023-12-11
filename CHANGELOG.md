@@ -1,42 +1,84 @@
-# Changelog
-
-All notable changes to this project will be documented in this file.
-
-## 2.0.0 - 2023-11-08
-### Changed
-* Bump @nextcloud/vue peer dependency to >=8.0.0
-* Replace NcDateTimePicker with NcDateTimePickerNative
-
-## 1.0.1 - 2023-10-09
-### Fixed
-* Form alignment
-* Delete button styling
-
-## 1.0.0
-### Changed
-* Drop legacy UMD bundle
-
-## 0.6.1
-### Changed
-* Migrate from rollup to Vite
-
-## 0.5.0 – 2023-01-17
-### Changed
-* Update @nextcloud/l10n to v2
-* Update @nextcloud/vue to v7
-* Dependencies updates
-
-## 0.4.0 - 2022-08-11
-
-* Add bug and feature form by @GretaD in https://github.com/nextcloud/calendar-availability-vue/pull/20
-* Update npm and node engines versions by @nextcloud-command in https://github.com/nextcloud/calendar-availability-vue/pull/21
-* Update @nextcloud/vue to 6.0.0-beta.1 by @PVince81 in https://github.com/nextcloud/calendar-availability-vue/pull/22
+## [2.0.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.0.0...v2.0.1) (2023-12-11)
 
 
-## 0.3.1 – 2022-02-22
-### Fixed
-- Narrow layout when all days are empty
+### Bug Fixes
 
-## 0.3.0 – 2022-02-15
-### Added
-- `@nextcloud/vue`@5 support
+* **aria:** Changed workdays to list format ([8ff7adf](https://github.com/nextcloud/calendar-availability-vue/commit/8ff7adf95e844a23e234273671003492692b265a))
+
+
+
+# [2.0.0](https://github.com/nextcloud/calendar-availability-vue/compare/v2.0.0-beta.3...v2.0.0) (2023-11-08)
+
+
+### Bug Fixes
+
+* **a11y:** Replace `NcDateTimePicker` with `NcDateTimePickerNative` ([c5649e3](https://github.com/nextcloud/calendar-availability-vue/commit/c5649e320e1f53249f275015a86a83588624d56c))
+* **deps:** bump @nextcloud/vue to ^8.0.0 ([2870c03](https://github.com/nextcloud/calendar-availability-vue/commit/2870c03b813e947ba970d257811797a46079da8d))
+
+
+
+# [2.0.0-beta.3](https://github.com/nextcloud/calendar-availability-vue/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2023-10-09)
+
+
+### Bug Fixes
+
+* delete button and row alignment ([dd0bd46](https://github.com/nextcloud/calendar-availability-vue/commit/dd0bd46ce5c51c83300f26613475bd689dea6df1))
+
+
+
+# [2.0.0-beta.2](https://github.com/nextcloud/calendar-availability-vue/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2023-10-05)
+
+
+
+# [2.0.0-beta.1](https://github.com/nextcloud/calendar-availability-vue/compare/v1.0.0...v2.0.0-beta.1) (2023-06-20)
+
+
+
+# [1.0.0](https://github.com/nextcloud/calendar-availability-vue/compare/v0.6.0-alpha1...v1.0.0) (2023-06-13)
+
+
+
+# [0.6.0-alpha1](https://github.com/nextcloud/calendar-availability-vue/compare/v0.5.0-rc2...v0.6.0-alpha1) (2023-01-17)
+
+
+
+# [0.5.0-rc2](https://github.com/nextcloud/calendar-availability-vue/compare/v0.5.0-rc1...v0.5.0-rc2) (2023-01-12)
+
+
+
+# [0.5.0-rc1](https://github.com/nextcloud/calendar-availability-vue/compare/v0.5.0-beta.3...v0.5.0-rc1) (2023-01-11)
+
+
+
+# [0.5.0-beta.3](https://github.com/nextcloud/calendar-availability-vue/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2022-09-08)
+
+
+
+# [0.5.0-beta.2](https://github.com/nextcloud/calendar-availability-vue/compare/v0.5.0-beta.1...v0.5.0-beta.2) (2022-09-01)
+
+
+
+# [0.5.0-beta.1](https://github.com/nextcloud/calendar-availability-vue/compare/v0.5.0-beta.0...v0.5.0-beta.1) (2022-08-22)
+
+
+
+# [0.5.0-beta.0](https://github.com/nextcloud/calendar-availability-vue/compare/v0.3.1...v0.5.0-beta.0) (2022-08-22)
+
+
+
+## [0.3.1](https://github.com/nextcloud/calendar-availability-vue/compare/v0.3.0...v0.3.1) (2022-02-22)
+
+
+
+# [0.3.0](https://github.com/nextcloud/calendar-availability-vue/compare/v0.2.1...v0.3.0) (2022-02-15)
+
+
+
+## [0.2.1](https://github.com/nextcloud/calendar-availability-vue/compare/v0.2.0...v0.2.1) (2021-11-24)
+
+
+
+# 0.2.0 (2021-11-24)
+
+
+
