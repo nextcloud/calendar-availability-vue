@@ -15,7 +15,7 @@ updates:
     labels:
       - "dependencies"
     reviewers:
-    - ChristophWurst
+    - GVodyanov
     - st3iny
     commit-message:
       prefix: chore
