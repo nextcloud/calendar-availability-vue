@@ -251,16 +251,6 @@ export default {
 	display: flex;
 	flex-direction: column;
 }
-::v-deep .mx-input-wrapper {
-	width: 85px;
-}
-::v-deep .mx-datepicker {
-	width: 97px;
-}
-::v-deep .multiselect {
-	border: 1px solid var(--color-border-dark);
-	width: 120px;
-}
 .time-zone {
 	padding: 32px 12px 12px 0;
 }
