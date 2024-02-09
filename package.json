@@ -3,7 +3,12 @@
   "version": "2.0.1",
   "description": "Weekly calendar availability component for Nextcloud apps",
   "type": "module",
-  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
+  },
   "scripts": {
     "build": "vite build",
     "watch": "vite build --watch",
@@ -39,18 +44,16 @@
     "@nextcloud/browserslist-config": "^3.0.0",
     "@nextcloud/eslint-config": "^8.2.0",
     "@nextcloud/l10n": "^1.4 || ^2.0",
+    "@nextcloud/vite-config": "^1.2.2",
     "@nextcloud/vue": "^8.6.2",
-    "@vitejs/plugin-vue2": "^2.2.0",
-    "browserslist-to-esbuild": "^2.1.0",
     "sass": "^1.57.1",
     "vite": "^5.0.7",
-    "vite-plugin-css-injected-by-js": "^3.0.0",
     "vue": "^2.7.8",
     "vue-template-compiler": "^2.7.8"
   },
   "peerDependencies": {
     "@nextcloud/l10n": "^1.4 || ^2.0",
-    "@nextcloud/vue": "^8.0.1",
+    "@nextcloud/vue": "^8.6.2",
     "vue": "^2.7"
   },
   "browserslist": [
