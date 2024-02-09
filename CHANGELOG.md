@@ -1,5 +1,12 @@
-## [2.0.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.0.0...v2.0.1) (2023-12-11)
+# [2.1.0](https://github.com/nextcloud/calendar-availability-vue/compare/v2.0.1...v2.1.0) (2024-02-09)
 
+### Build
+
+* **chore:** update npm engines version to 10.0.0 (https://github.com/nextcloud/calendar-availability-vue/pull/213)
+* **build:** migrate to `@nextcloud/vite-config` and externalize `@nextcloud/vue` (https://github.com/nextcloud/calendar-availability-vue/pull/225)
+* **deps:** bump `@nextcloud/vue` to v8.6.2 (https://github.com/nextcloud/calendar-availability-vue/pull/224)
+
+# [2.0.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.0.0...v2.0.1) (2023-12-11)
 
 ### Bug Fixes
 
