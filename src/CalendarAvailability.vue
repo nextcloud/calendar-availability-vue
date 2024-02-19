@@ -1,5 +1,5 @@
 <template>
-	<ul class="week-day-container" aria-label="List of weekdays">
+	<ul class="week-day-container" :aria-label="l10nWeekDayListLabel">
 		<template v-for="day in internalSlots">
 			<li :key="`day-label-${day.id}`" class="day-container">
 				<div class="label-weekday">
@@ -99,6 +99,10 @@ export default {
 		l10nAddSlot: {
 			type: String,
 			required: true,
+		},
+		l10nWeekDayListLabel: {
+			type: String,
+			default: 'Weekdays',
 		},
 		l10nMonday: {
 			type: String,
