@@ -1,5 +1,5 @@
 import { getZoneString } from 'icalzone'
-import { parse as parseIcal, Component } from 'ical.js'
+import ICAL from 'ical.js'
 import { v4 as uuidv4 } from 'uuid'
 import logger from './utils/logger.js'
 
@@ -23,9 +23,9 @@ export function getEmptySlots() {
  * @param vavailability
  */
 export function vavailabilityToSlots(vavailability) {
-	const parsedIcal = parseIcal(vavailability)
+	const parsedIcal = ICAL.parse(vavailability)
 
-	const vcalendarComp = new Component(parsedIcal)
+	const vcalendarComp = new ICAL.Component(parsedIcal)
 	const vavailabilityComp = vcalendarComp.getFirstSubcomponent('vavailability')
 
 	let timezoneId
