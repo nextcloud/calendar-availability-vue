@@ -266,7 +266,6 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 6px;
 }
 .button {
 	align-self: flex-end;
@@ -316,5 +315,8 @@ export default {
 	max-width: 500px;
 	width: 100%;
 	gap: 24px;
+	border-top: 1px solid var(--color-border);
+	padding-top: calc(3 * var(--default-grid-baseline));
+	margin-top: calc(2 * var(--default-grid-baseline));
 }
 </style>
