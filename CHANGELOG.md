@@ -1,3 +1,14 @@
+# [2.2.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.0...v2.2.1) (2024-05-21)
+
+
+### Bug Fixes
+
+* Improve slot layout (5705b25)
+* Update vulnerable dependencies (5d3d3ac)
+* Conform to latest ical.js version (5db116e)
+
+
+
 # [2.2.0](https://github.com/nextcloud/calendar-availability-vue/compare/v2.1.0...v2.2.0) (2024-02-20)
 
 
