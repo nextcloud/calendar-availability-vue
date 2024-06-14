@@ -6,13 +6,13 @@ jobs:
     name: Conventional Commits
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: webiny/action-conventional-commits@v1.3.0
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: webiny/action-conventional-commits@8bc41ff4e7d423d56fa4905f6ff79209a78776c7 # v1.3.0
   fixup-squash-commits:
     name: Fixup and squash commits
     runs-on: ubuntu-latest
     steps:
       - name: Run check
-        uses: xt0rted/block-autosquash-commits-action@v2
+        uses: xt0rted/block-autosquash-commits-action@79880c36b4811fe549cfffe20233df88876024e7 # v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
