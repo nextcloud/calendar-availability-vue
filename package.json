@@ -41,7 +41,7 @@
     "vue-material-design-icons": "^5.1.2"
   },
   "devDependencies": {
-    "@nextcloud/browserslist-config": "^3.0.0",
+    "@nextcloud/browserslist-config": "^3.0.1",
     "@nextcloud/eslint-config": "^8.4.1",
     "@nextcloud/l10n": "^1.4 || ^2.0 || ^3.0.0",
     "@nextcloud/vite-config": "^1.2.4",
