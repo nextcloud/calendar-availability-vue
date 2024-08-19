@@ -1,20 +1,34 @@
-# [2.2.2](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.1...v2.2.2) (2024-06-24)
-
-
-### Changes
-
-* Update dependencies
-
-
-
-# [2.2.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.0...v2.2.1) (2024-05-21)
+## [2.2.3](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.2...v2.2.3) (2024-08-19)
 
 
 ### Bug Fixes
 
-* Improve slot layout (5705b25)
-* Update vulnerable dependencies (5d3d3ac)
-* Conform to latest ical.js version (5db116e)
+* **deps:** bump uuid from 9.0.1 to v10 ([c7778a7](https://github.com/nextcloud/calendar-availability-vue/commit/c7778a7059478adad404166fbc56af0dbfcdc637))
+* **deps:** bump vue-material-design-icons from 5.3.0 to ^5.3.0 ([72ec1c0](https://github.com/nextcloud/calendar-availability-vue/commit/72ec1c0f8e1ec07477aa9e41bb65699234be3553))
+* **deps:** fix npm audit ([ef393a7](https://github.com/nextcloud/calendar-availability-vue/commit/ef393a7f16f4e869102af4578bdb5a5d2bb2f262))
+* **deps:** Fix npm audit ([0ade6e4](https://github.com/nextcloud/calendar-availability-vue/commit/0ade6e45b58591abbc79c0de8827ac1aafc71277))
+* **deps:** Fix npm audit ([579c8a1](https://github.com/nextcloud/calendar-availability-vue/commit/579c8a1219d959e6dbc73357e1d8567fa4e699eb))
+
+
+
+## [2.2.2](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.1...v2.2.2) (2024-06-24)
+
+
+### Bug Fixes
+
+* **deps:** bump @nextcloud/logger from 3.0.2 to ^3.0.2 ([e369b6d](https://github.com/nextcloud/calendar-availability-vue/commit/e369b6d025af82d2b4f01bd757a19a116cb43625))
+* **deps:** bump uuid from 9.0.1 to ^9.0.1 ([29ad53b](https://github.com/nextcloud/calendar-availability-vue/commit/29ad53bf9e0d12082ac77fb858cea78fd3e64bd9))
+
+
+
+## [2.2.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.0...v2.2.1) (2024-05-21)
+
+
+### Bug Fixes
+
+* conform to latest ical.js version ([5db116e](https://github.com/nextcloud/calendar-availability-vue/commit/5db116e1f5fc75365650677e51f1b14677014d17))
+* **deps:** fix npm audit ([5d3d3ac](https://github.com/nextcloud/calendar-availability-vue/commit/5d3d3ac994fdd17c4aec41ac4cc230ab8f4feaf0))
+* Personnal availability better readability ([5705b25](https://github.com/nextcloud/calendar-availability-vue/commit/5705b250c9fc33de41e6af7d73d8496eeea2e47c))
 
 
 
