@@ -1,4 +1,4 @@
-## [2.2.3](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.2...v2.2.3) (2024-08-19)
+## [2.2.4](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.2...v2.2.4) (2024-08-19)
 
 
 ### Bug Fixes
