@@ -318,5 +318,10 @@ export default {
 	border-top: 1px solid var(--color-border);
 	padding-top: calc(3 * var(--default-grid-baseline));
 	margin-top: calc(2 * var(--default-grid-baseline));
+	align-items: center;
+
+	& > button {
+		align-self: center;
+	}
 }
 </style>
