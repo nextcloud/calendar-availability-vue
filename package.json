@@ -47,7 +47,7 @@
     "@nextcloud/vite-config": "^1.4.2",
     "@nextcloud/vue": "^8.19.0",
     "sass": "^1.80.4",
-    "vite": "^5.4.8",
+    "vite": "^5.4.10",
     "vue": "^2.7.16",
     "vue-template-compiler": "^2.7.16"
   },
