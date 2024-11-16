@@ -1,4 +1,6 @@
-name: "Bug"
+# SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: MIT
+name: "🐞 Bug report"
 description: "Have you encountered a bug?"
 labels: ["bug", "0. to triage"]
 body:

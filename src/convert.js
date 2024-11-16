@@ -1,3 +1,8 @@
+/**
+ * SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: MIT
+ */
+
 import { getZoneString } from 'icalzone'
 import ICAL from 'ical.js'
 import { v4 as uuidv4 } from 'uuid'

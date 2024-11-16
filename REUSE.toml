@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: MIT
+version = 1
+SPDX-PackageName = "calendar-availability-vue"
+SPDX-PackageSupplier = "Nextcloud <info@nextcloud.com>"
+SPDX-PackageDownloadLocation = "https://github.com/nextcloud/calendar-availability-vue"
+
+[[annotations]]
+path = ["package.json", "package-lock.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021 Nextcloud GmbH and Nextcloud contributors"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ["renovate.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Nextcloud GmbH and Nextcloud contributors"
+SPDX-License-Identifier = "MIT"

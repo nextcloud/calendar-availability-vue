@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: MIT
+-->
 # calendar-availability-vue
 
 Weekly calendar availability component for Nextcloud apps
