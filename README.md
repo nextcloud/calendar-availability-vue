@@ -4,6 +4,8 @@
 -->
 # calendar-availability-vue
 
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/calendar-availability-vue)](https://api.reuse.software/info/github.com/nextcloud/calendar-availability-vue)
+
 Weekly calendar availability component for Nextcloud apps
 
 ## Maintainers
