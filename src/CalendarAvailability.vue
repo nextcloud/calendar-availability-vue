@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: MIT
+-->
 <template>
 	<ul class="week-day-container" :aria-label="l10nWeekDayListLabel">
 		<template v-for="day in internalSlots">
