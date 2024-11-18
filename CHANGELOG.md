@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2 - 2024-11-18
+### Changed
+* Update vulnerable dependencies
+
 ## 1.0.1 - 2023-10-09
 ### Fixed
 * Form alignment
