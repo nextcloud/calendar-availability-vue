@@ -43,9 +43,16 @@ export function vavailabilityToSlots(vavailability) {
 	// Combine all AVAILABLE blocks into a week of slots
 	const slots = getEmptySlots()
 	availableComps.forEach((availableComp) => {
-		const start = availableComp.getFirstProperty('dtstart').getFirstValue().toJSDate()
-		const end = availableComp.getFirstProperty('dtend').getFirstValue().toJSDate()
+		const startIcalDate = availableComp.getFirstProperty('dtstart').getFirstValue()
+		const endIcalDate = availableComp.getFirstProperty('dtend').getFirstValue()
 		const rrule = availableComp.getFirstProperty('rrule')
+
+		// Prevent date to be converted to local time zone (and to be shifted by the utc offset).
+		// Instead, set hh:mm directly as if they are in the component's time zone.
+		const start = new Date()
+		start.setHours(startIcalDate.hour, startIcalDate.minute, 0, 0)
+		const end = new Date()
+		end.setHours(endIcalDate.hour, endIcalDate.minute, 0, 0)
 
 		if (rrule.getFirstValue().freq !== 'WEEKLY') {
 			logger.warn('rrule not supported', {
