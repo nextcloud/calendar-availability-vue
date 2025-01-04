@@ -1,7 +1,22 @@
-<!--
-  - SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
-  - SPDX-License-Identifier: MIT
--->
+## [2.2.5](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.4...v2.2.5) (2025-01-04)
+
+
+### Bug Fixes
+
+* **deps:** bump ical.js from 2.0.1 to ^2.1.0 ([f7f0e33](https://github.com/nextcloud/calendar-availability-vue/commit/f7f0e33c7a182c07e6916efc5f348af78d735dc4))
+* **deps:** bump uuid from 10.0.0 to v11 ([3912c6d](https://github.com/nextcloud/calendar-availability-vue/commit/3912c6d00d7165a066716eef46ed316fe06d4153))
+* **deps:** bump uuid from 11.0.2 to ^11.0.3 ([#331](https://github.com/nextcloud/calendar-availability-vue/issues/331)) ([a344a85](https://github.com/nextcloud/calendar-availability-vue/commit/a344a85388e3d4a2d4e3c4ec43c55efaca25322c))
+* **deps:** bump vite from 5.2.11 to v5.2.14 ([250178d](https://github.com/nextcloud/calendar-availability-vue/commit/250178d0a421b023cd5d5681d634e01a6a271e59))
+* **deps:** bump vue-material-design-icons from 5.3.0 to ^5.3.1 ([27e76e4](https://github.com/nextcloud/calendar-availability-vue/commit/27e76e4b02a2ba31fe58a255e20a83ca0aaa2652))
+* **deps:** Fix npm audit ([e608bbb](https://github.com/nextcloud/calendar-availability-vue/commit/e608bbb0cf6cb6691c4f87d5b663d27ad99bdb29))
+* **deps:** Fix npm audit ([6a1bf24](https://github.com/nextcloud/calendar-availability-vue/commit/6a1bf24c4c6641f1232c6a5a260fd8076af26019))
+* **deps:** Fix npm audit ([2cf8a5e](https://github.com/nextcloud/calendar-availability-vue/commit/2cf8a5eafef650925a27b66afd3a2d5ca1639698))
+* **deps:** Fix npm audit ([60c0892](https://github.com/nextcloud/calendar-availability-vue/commit/60c0892804ecaaabd5949f881e3d062a412e1ee5))
+* **deps:** Fix npm audit ([20e2903](https://github.com/nextcloud/calendar-availability-vue/commit/20e29036b6859ad3079cdff1fc5fb432c4f19ec9))
+* time shifting when parsing slots ([547b6d4](https://github.com/nextcloud/calendar-availability-vue/commit/547b6d4605c2f5d6383c5576ae192a793c5d416a))
+
+
+
 ## [2.2.4](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.2...v2.2.4) (2024-08-19)
 
 
