@@ -1,3 +1,12 @@
+## [2.2.6](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.5...v2.2.6) (2025-01-06)
+
+
+### Bug Fixes
+
+* **deps:** relax @nextcloud/vue constraint to ^8 ([37ee001](https://github.com/nextcloud/calendar-availability-vue/commit/37ee001c6d1b5b0969d6385be1d7efc35ab78cce))
+
+
+
 ## [2.2.5](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.4...v2.2.5) (2025-01-04)
 
 
