@@ -1,3 +1,22 @@
+## [2.2.7](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.6...v2.2.7) (2025-06-23)
+
+
+### Bug Fixes
+
+* **deps:** bump uuid from 11.0.3 to ^11.0.5 ([8ff231f](https://github.com/nextcloud/calendar-availability-vue/commit/8ff231f92a98abb59e34c857805bb24b2ffb2442))
+* **deps:** bump uuid from 11.0.5 to ^11.1.0 ([56cbbbf](https://github.com/nextcloud/calendar-availability-vue/commit/56cbbbff5c56e531f90a2775b1ad104d7a2cb077))
+* **deps:** bump vite from 5.4.11 to v5.4.12 ([51e9491](https://github.com/nextcloud/calendar-availability-vue/commit/51e94910c39dac3904103426e8c2c535d4e7a9a4))
+* **deps:** bump vite from 5.4.15 to v5.4.17 ([25abed3](https://github.com/nextcloud/calendar-availability-vue/commit/25abed344ee4412903951799dd8c0b1439f1534f))
+* **deps:** bump vite from 5.4.17 to v5.4.18 ([38744c5](https://github.com/nextcloud/calendar-availability-vue/commit/38744c52994f95aafd420d4886fba63c1ea3501c))
+* **deps:** Fix npm audit ([6a7fcc1](https://github.com/nextcloud/calendar-availability-vue/commit/6a7fcc1c0ee13cf4d98057adefd26717743fa71c))
+* **deps:** Fix npm audit ([e30b6a2](https://github.com/nextcloud/calendar-availability-vue/commit/e30b6a2cf69ddec53dcef114ef47dfaeb7c57d81))
+* **deps:** Fix npm audit ([4885f0b](https://github.com/nextcloud/calendar-availability-vue/commit/4885f0b7fcabba059491c6bc552a1e4d3da146dd))
+* **deps:** Fix npm audit ([78d6897](https://github.com/nextcloud/calendar-availability-vue/commit/78d68973b0955d6a3454869cdbc6547308a0e174))
+* **deps:** Fix npm audit ([7b70ece](https://github.com/nextcloud/calendar-availability-vue/commit/7b70ece1cd7e40e4ef88600ab3e120525b402dfe))
+* **deps:** Fix npm audit ([fcea28d](https://github.com/nextcloud/calendar-availability-vue/commit/fcea28de6e79a8359342a94e2691d0f5f83908dc))
+
+
+
 ## [2.2.6](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.5...v2.2.6) (2025-01-06)
 
 
