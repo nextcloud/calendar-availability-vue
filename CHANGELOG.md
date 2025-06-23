@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.3 - 2025-06-23
+### Changed
+* Update vulnerable dependencies
+
 ## 1.0.2 - 2024-11-18
 ### Changed
 * Update vulnerable dependencies
