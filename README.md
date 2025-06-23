@@ -15,10 +15,10 @@ Weekly calendar availability component for Nextcloud apps
 
 ## Compatibility matrix
 
-`@nextcloud/calendar-availability-vue` | `@nextcloud/vue`
----------------------------------------|-----------------
-1.x.x                                  | 6.x.x. and 7.x.x
-2.x.x                                  | 8.x.x
+`@nextcloud/calendar-availability-vue` | `@nextcloud/vue` | Status
+---------------------------------------|------------------|----------
+1.x.x                                  | 6.x.x. and 7.x.x | EOL
+2.x.x                                  | 8.x.x            | Supported
 
 ## Slots data structure
 
