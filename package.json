@@ -44,17 +44,16 @@
     "@nextcloud/browserslist-config": "^3.0.1",
     "@nextcloud/eslint-config": "^8.4.2",
     "@nextcloud/l10n": "^1.4 || ^2.0 || ^3.0.0",
-    "@nextcloud/vite-config": "^1.5.6",
-    "@nextcloud/vue": "^8.28.0",
+    "@nextcloud/vite-config": "^2.3.5",
+    "@nextcloud/vue": "^9.0.0-rc.4",
     "sass": "^1.89.2",
     "vite": "^6.3.5",
-    "vue": "^2.7.16",
-    "vue-template-compiler": "^2.7.16"
+    "vue": "^3.5.17"
   },
   "peerDependencies": {
     "@nextcloud/l10n": "^1.4 || ^2.0 || ^3.0.0",
-    "@nextcloud/vue": "^8.28.0",
-    "vue": "^2.7.16"
+    "@nextcloud/vue": "^9.0.0-rc.4",
+    "vue": "^3.5.17"
   },
   "browserslist": [
     "extends @nextcloud/browserslist-config"
