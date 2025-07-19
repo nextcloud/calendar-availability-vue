@@ -1,3 +1,15 @@
+## [3.0.0-rc.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.7...v3.0.0-rc.1) (2025-07-19)
+
+
+### Breaking changes
+
+* Migrate library to Vue 3
+
+### Bug Fixes
+
+* Bump vulnerable dependencies
+
+
 ## [2.2.7](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.6...v2.2.7) (2025-06-23)
 
 
