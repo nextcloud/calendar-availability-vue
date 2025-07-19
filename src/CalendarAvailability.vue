@@ -4,15 +4,15 @@
 -->
 <template>
 	<ul class="week-day-container" :aria-label="l10nWeekDayListLabel">
-		<template v-for="day in internalSlots">
-			<li :key="`day-label-${day.id}`" class="day-container">
+		<template v-for="day in internalSlots" :key="`day-label-${day.id}`">
+			<li class="day-container">
 				<div class="label-weekday">
 					<span :id="day.displayName + '-label'">{{ day.displayName }}</span>
 				</div>
 				<div :key="`day-slots-${day.id}`" class="availability-slots">
 					<div class="availability-slot-group">
-						<template v-for="(slot, idx) in day.slots">
-							<div :key="`slot-${day.id}-${idx}`" class="availability-slot">
+						<template v-for="(slot, idx) in day.slots" :key="`slot-${day.id}-${idx}`">
+							<div class="availability-slot">
 								<NcDateTimePickerNative :id="`start-${day.id}-${idx}`"
 									v-model="slot.start"
 									type="time"
@@ -64,8 +64,7 @@
 </template>
 
 <script>
-import NcDateTimePickerNative from '@nextcloud/vue/dist/Components/NcDateTimePickerNative.js'
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import { NcButton, NcDateTimePickerNative } from '@nextcloud/vue'
 import IconDelete from 'vue-material-design-icons/Delete.vue'
 import IconAdd from 'vue-material-design-icons/Plus.vue'
 
