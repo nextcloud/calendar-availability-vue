@@ -35,7 +35,7 @@
   "homepage": "https://github.com/nextcloud/calendar-availability-vue#readme",
   "dependencies": {
     "@nextcloud/logger": "^3.0.2",
-    "ical.js": "^2.1.0",
+    "ical.js": "^2.2.0",
     "icalzone": "^0.0.1",
     "uuid": "^11.1.0",
     "vue-material-design-icons": "^5.3.1"
