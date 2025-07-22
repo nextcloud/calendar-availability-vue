@@ -21,6 +21,14 @@ Weekly calendar availability component for Nextcloud apps
 2.x.x                                  | 8.x.x            | 2     | ✅
 3.x.x                                  | 9.x.x            | 3     | ✅
 
+## Publishing releases
+
+Releases are tagged, build and published via a workflow dispatch.
+
+1. Navigate to [https://github.com/nextcloud/calendar-availability-vue/actions/workflows/release.yml](https://github.com/nextcloud/calendar-availability-vue/actions/workflows/release.yml).
+2. Run workflow and select branch `main` (or `stableX.X`).
+3. Wait for a maintainer to approve (or do it yourself).
+
 ## Slots data structure
 
 The following data structure is used in the front-end. There are helpers to converts from the ical `VAVAILABILITY` structure to this custom structure and back.
