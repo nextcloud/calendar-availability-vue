@@ -1,3 +1,13 @@
+## [2.2.9](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.8...v2.2.9) (2025-08-24)
+
+
+### Bug Fixes
+
+* **deps:** Fix npm audit ([ade9efd](https://github.com/nextcloud/calendar-availability-vue/commit/ade9efd03075808ca5def1a8b7625b915083f75d))
+* **deps:** Fix npm audit ([da1712f](https://github.com/nextcloud/calendar-availability-vue/commit/da1712f15721baab2ba60ec5ed78bcfa17438ba4))
+
+
+
 ## [2.2.8](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.7...v2.2.8) (2025-07-28)
 
 
