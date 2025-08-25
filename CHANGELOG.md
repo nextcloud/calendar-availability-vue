@@ -1,3 +1,12 @@
+## [2.2.10](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.9...v2.2.10) (2025-08-25)
+
+
+### Bug Fixes
+
+* use outline delete icon ([a78a1cc](https://github.com/nextcloud/calendar-availability-vue/commit/a78a1cc7bef5febd75e5ed0a896c179953e586b2))
+
+
+
 ## [2.2.9](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.8...v2.2.9) (2025-08-24)
 
 
