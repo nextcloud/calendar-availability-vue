@@ -65,7 +65,7 @@
 
 <script>
 import { NcButton, NcDateTimePickerNative } from '@nextcloud/vue'
-import IconDelete from 'vue-material-design-icons/DeleteOutline.vue'
+import IconDelete from 'vue-material-design-icons/TrashCanOutline.vue'
 import IconAdd from 'vue-material-design-icons/Plus.vue'
 
 import { getFirstDay } from '@nextcloud/l10n'
