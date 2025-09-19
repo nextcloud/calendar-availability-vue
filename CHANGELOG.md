@@ -1,13 +1,18 @@
-## [3.0.0-rc.1](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.7...v3.0.0-rc.1) (2025-07-19)
+# [3.0.0](https://github.com/nextcloud/calendar-availability-vue/compare/v3.0.0-rc.1...v3.0.0) (2025-09-19)
 
-
-### Breaking changes
-
-* Migrate library to Vue 3
 
 ### Bug Fixes
 
-* Bump vulnerable dependencies
+* **deps:** bump ical.js from 2.1.0 to ^2.2.0 ([7b5718b](https://github.com/nextcloud/calendar-availability-vue/commit/7b5718bdcda4fb3ac672b7fd19aae0bb2c4488ba))
+* **deps:** bump ical.js from 2.2.0 to ^2.2.1 ([#417](https://github.com/nextcloud/calendar-availability-vue/issues/417)) ([e555b88](https://github.com/nextcloud/calendar-availability-vue/commit/e555b88c187987c700182dacad679ad6db0333a8))
+* **deps:** bump uuid from 11.1.0 to v12 ([12c34e0](https://github.com/nextcloud/calendar-availability-vue/commit/12c34e0e8ff4254aa56bbc6e7c49694dff429854))
+* **deps:** bump vite from 6.3.5 to v6.3.6 ([d7a7771](https://github.com/nextcloud/calendar-availability-vue/commit/d7a77710bc89b4b4041859db2d79644d0138ccac))
+* **deps:** Fix npm audit ([ceed67a](https://github.com/nextcloud/calendar-availability-vue/commit/ceed67a3b08bacee2698ff684fdcdedc4aad7a7c))
+* **deps:** Fix npm audit ([9431e43](https://github.com/nextcloud/calendar-availability-vue/commit/9431e433c38b3051afce0bda41cd904f79e31023))
+* **deps:** Fix npm audit ([f2e28a9](https://github.com/nextcloud/calendar-availability-vue/commit/f2e28a9b42005eb1904a4d1ce200fe2d524eef31))
+* relax @nextcloud/vue peer dependency to ^9 ([0737435](https://github.com/nextcloud/calendar-availability-vue/commit/07374357b791b84f98ed8f550b054274342a8a4f))
+* use outline delete icon ([c355327](https://github.com/nextcloud/calendar-availability-vue/commit/c35532795b01e0f370f539e2045a5d3497e71f3b))
+
 
 
 ## [2.2.7](https://github.com/nextcloud/calendar-availability-vue/compare/v2.2.6...v2.2.7) (2025-06-23)
