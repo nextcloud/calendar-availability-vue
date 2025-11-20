@@ -45,14 +45,14 @@
     "@nextcloud/eslint-config": "^8.4.2",
     "@nextcloud/l10n": "^1.4 || ^2.0 || ^3.0.0",
     "@nextcloud/vite-config": "^2.4.0",
-    "@nextcloud/vue": "^9.1.0",
+    "@nextcloud/vue": "^9.3.0",
     "sass": "^1.89.2",
     "vite": "^6.3.5",
     "vue": "^3.5.17"
   },
   "peerDependencies": {
     "@nextcloud/l10n": "^1.4 || ^2.0 || ^3.0.0",
-    "@nextcloud/vue": "^9.1.0",
+    "@nextcloud/vue": "^9.3.0",
     "vue": "^3.5.17"
   },
   "browserslist": [
