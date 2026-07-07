@@ -31,13 +31,13 @@
 									class="end-date"
 									@change="onChangeSlots" />
 								<NcButton :key="`slot-${day.id}-${idx}-btn`"
-									type="tertiary"
-									class="button"
+									variant="tertiary"
+									class="delete"
 									:aria-label="l10nDeleteSlot"
 									:title="l10nDeleteSlot"
 									@click="removeSlot(day, idx)">
 									<template #icon>
-										<IconDelete :size="20" />
+										<IconClose :size="20" />
 									</template>
 								</NcButton>
 							</div>
@@ -49,6 +49,7 @@
 					</span>
 				</div>
 				<NcButton :key="`add-slot-${day.id}`"
+					variant="tertiary"
 					:disabled="loading"
 					class="add-another button"
 					:title="l10nAddSlot"
@@ -64,9 +65,10 @@
 </template>
 
 <script>
-import { NcButton, NcDateTimePickerNative } from '@nextcloud/vue'
-import IconDelete from 'vue-material-design-icons/TrashCanOutline.vue'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcDateTimePickerNative from '@nextcloud/vue/components/NcDateTimePickerNative'
 import IconAdd from 'vue-material-design-icons/Plus.vue'
+import IconClose from 'vue-material-design-icons/Close.vue'
 
 import { getFirstDay } from '@nextcloud/l10n'
 
@@ -76,7 +78,7 @@ export default {
 		NcDateTimePickerNative,
 		NcButton,
 		IconAdd,
-		IconDelete,
+		IconClose,
 	},
 	props: {
 		slots: {
@@ -238,93 +240,86 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.availability-day {
-	padding: 0 10px 0 10px;
-	position: absolute;
-}
-.availability-slots {
-	max-width: 332px;
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	white-space: nowrap;
-}
-.availability-slot {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-.availability-slot-group {
-	display: flex;
-	flex-direction: column;
-}
-.time-zone {
-	padding: 32px 12px 12px 0;
-}
 .week-day-container {
 	box-sizing: border-box;
-	margin-bottom: 32px;
-	max-width: 500px;
+	margin-bottom: calc(var(--default-grid-baseline) * 8);
+	max-width: 700px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
-.button {
-	align-self: flex-end;
-}
-.label-weekday {
-	position: relative;
-	display: flex;
-	align-items: flex-start;
-	min-width: 77px;
-	width: 77px;
 
-	> span {
-		height: 50px;
-		display: flex;
-		align-items: center;
-	}
-}
-.add-another {
-	background-color: transparent;
-	border: none;
-	opacity: .5;
-	display: inline-flex;
-	padding: 0;
-	margin: 0;
-	margin-bottom: 3px;
-
-	&:hover {
-		opacity: 1;
-	}
-}
-.to-text {
-	padding-right: 12px;
-}
-.time-zone-text{
-	padding-left: 22px;
-}
-.empty-content {
-	color: var(--color-text-lighter);
-	display: inline-flex;
-	align-items: center;
-}
-.start-date {
-	padding-right: 12px;
-}
 .day-container {
 	display: flex;
-	max-width: 500px;
 	width: 100%;
-	gap: 24px;
-	border-top: 1px solid var(--color-border);
-	padding-top: calc(3 * var(--default-grid-baseline));
-	margin-top: calc(2 * var(--default-grid-baseline));
+	gap: calc(var(--default-grid-baseline) * 8);
+	padding: calc(var(--default-grid-baseline) * 2) 0;
+	border-bottom: 1px solid var(--color-border);
 	align-items: center;
 
 	& > button {
 		align-self: center;
 	}
 }
+
+.label-weekday {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	min-width: calc(var(--default-grid-baseline) * 20);
+	width: calc(var(--default-grid-baseline) * 20);
+	margin-bottom: auto;
+
+	> span {
+		display: flex;
+		align-items: center;
+		height: var(--default-clickable-area);
+
+	}
+}
+
+.availability-slots {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	white-space: nowrap;
+}
+
+.availability-slot-group {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--default-grid-baseline) * 2);
+}
+
+.availability-slot {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: calc(var(--default-grid-baseline) * 3);
+}
+
+.delete {
+	align-self: flex-end;
+}
+
+.add-another {
+	margin-top: auto;
+}
+
+.empty-content {
+	color: var(--color-text-maxcontrast);
+	display: inline-flex;
+	align-items: center;
+	margin-inline-start: calc(var(--default-grid-baseline) * 3);
+}
+
+.time-zone {
+	padding: 32px 12px 12px 0;
+}
+
+.time-zone-text{
+	padding-left: calc(var(--default-grid-baseline) * 6);
+}
+
 </style>
