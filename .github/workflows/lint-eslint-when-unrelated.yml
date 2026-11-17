@@ -20,7 +20,7 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - 'tsconfig.json'
-      - '.eslintrc.*'
+      - 'eslint.config.*'
       - '.eslintignore'
       - '**.js'
       - '**.ts'

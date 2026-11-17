@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-import { getZoneString } from 'icalzone'
 import ICAL from 'ical.js'
+import { getZoneString } from 'icalzone'
 import { v4 as uuidv4 } from 'uuid'
 import logger from './utils/logger.js'
 
@@ -24,8 +24,10 @@ export function getEmptySlots() {
 }
 
 /**
+ * Parse a VAVAILABILITY calendar into weekly slots
  *
- * @param vavailability
+ * @param {string} vavailability iCalendar data containing a VAVAILABILITY component
+ * @return {{slots: object, timezoneId: string|undefined}} slots per weekday and the time zone of the data
  */
 export function vavailabilityToSlots(vavailability) {
 	const parsedIcal = ICAL.parse(vavailability)
@@ -61,7 +63,7 @@ export function vavailabilityToSlots(vavailability) {
 			return
 		}
 
-		rrule.getFirstValue().getComponent('BYDAY').forEach(day => {
+		rrule.getFirstValue().getComponent('BYDAY').forEach((day) => {
 			slots[day].push({
 				start: start.getTime() / 1000,
 				end: end.getTime() / 1000,
@@ -76,9 +78,11 @@ export function vavailabilityToSlots(vavailability) {
 }
 
 /**
+ * Serialize weekly slots into a VAVAILABILITY calendar
  *
- * @param slots
- * @param timezoneId
+ * @param {object} slots slots per weekday (MO-SU), each a list of `{ start, end }` Unix timestamps
+ * @param {string} timezoneId time zone of the slots
+ * @return {string} iCalendar data
  */
 export function slotsToVavailability(slots, timezoneId) {
 	const vcalendarComp = new ICAL.Component('vcalendar')
@@ -119,12 +123,12 @@ export function slotsToVavailability(slots, timezoneId) {
 	}, {})
 
 	// Create an AVAILABILITY component for every recurring slot
-	Object.keys(deduplicated).map(key => {
+	Object.keys(deduplicated).map((key) => {
 		const slots = deduplicated[key]
 		const start = slots[0].start
 		const end = slots[0].end
 		// Combine days but make them also unique
-		const days = slots.map(slot => slot.day).filter((day, index, self) => self.indexOf(day) === index)
+		const days = slots.map((slot) => slot.day).filter((day, index, self) => self.indexOf(day) === index)
 
 		const availableComp = new ICAL.Component('available')
 
