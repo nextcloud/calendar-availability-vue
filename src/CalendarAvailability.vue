@@ -13,24 +13,27 @@
 					<div class="availability-slot-group">
 						<template v-for="(slot, idx) in day.slots" :key="`slot-${day.id}-${idx}`">
 							<div class="availability-slot">
-								<NcDateTimePickerNative :id="`start-${day.id}-${idx}`"
+								<NcDateTimePickerNative
+									:id="`start-${day.id}-${idx}`"
 									v-model="slot.start"
 									type="time"
 									:label="l10nStartPickerLabel?.(day.displayName)"
-									:hide-label="true"
+									:hideLabel="true"
 									class="start-date"
 									@change="onChangeSlots" />
 								<span class="to-text">
 									{{ l10nTo }}
 								</span>
-								<NcDateTimePickerNative :id="`end-${day.id}-${idx}`"
+								<NcDateTimePickerNative
+									:id="`end-${day.id}-${idx}`"
 									v-model="slot.end"
 									type="time"
 									:label="l10nEndPickerLabel?.(day.displayName)"
-									:hide-label="true"
+									:hideLabel="true"
 									class="end-date"
 									@change="onChangeSlots" />
-								<NcButton :key="`slot-${day.id}-${idx}-btn`"
+								<NcButton
+									:key="`slot-${day.id}-${idx}-btn`"
 									variant="tertiary"
 									class="delete"
 									:aria-label="l10nDeleteSlot"
@@ -43,12 +46,14 @@
 							</div>
 						</template>
 					</div>
-					<span v-if="day.slots.length === 0"
+					<span
+						v-if="day.slots.length === 0"
 						class="empty-content">
 						{{ l10nEmptyDay }}
 					</span>
 				</div>
-				<NcButton :key="`add-slot-${day.id}`"
+				<NcButton
+					:key="`add-slot-${day.id}`"
 					variant="tertiary"
 					:disabled="loading"
 					class="add-another button"
@@ -65,12 +70,11 @@
 </template>
 
 <script>
+import { getFirstDay } from '@nextcloud/l10n'
 import NcButton from '@nextcloud/vue/components/NcButton'
 import NcDateTimePickerNative from '@nextcloud/vue/components/NcDateTimePickerNative'
-import IconAdd from 'vue-material-design-icons/Plus.vue'
 import IconClose from 'vue-material-design-icons/Close.vue'
-
-import { getFirstDay } from '@nextcloud/l10n'
+import IconAdd from 'vue-material-design-icons/Plus.vue'
 
 export default {
 	name: 'CalendarAvailability',
@@ -80,89 +84,159 @@ export default {
 		IconAdd,
 		IconClose,
 	},
+
 	props: {
+		/**
+		 * Availability slots per weekday (MO-SU), each a list of `{ start, end }` Unix timestamps
+		 */
 		slots: {
 			type: Object,
 			required: true,
 		},
+
+		/**
+		 * Show a loading state instead of the slot editor
+		 */
 		loading: {
 			type: Boolean,
 			default: false,
 		},
+
+		/**
+		 * Translated separator between start and end time
+		 */
 		l10nTo: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated label of the delete slot button
+		 */
 		l10nDeleteSlot: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated text for a day without slots
+		 */
 		l10nEmptyDay: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated label of the add slot button
+		 */
 		l10nAddSlot: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated accessible label of the weekday list
+		 */
 		l10nWeekDayListLabel: {
 			type: String,
 			default: 'Weekdays',
 		},
+
+		/**
+		 * Translated name of Monday
+		 */
 		l10nMonday: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated name of Tuesday
+		 */
 		l10nTuesday: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated name of Wednesday
+		 */
 		l10nWednesday: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated name of Thursday
+		 */
 		l10nThursday: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated name of Friday
+		 */
 		l10nFriday: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated name of Saturday
+		 */
 		l10nSaturday: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Translated name of Sunday
+		 */
 		l10nSunday: {
 			type: String,
 			required: true,
 		},
+
+		/**
+		 * Returns the translated label of the start time picker for a day name
+		 */
 		l10nStartPickerLabel: {
 			type: Function,
 			default: (dayName) => `Pick a start time for ${dayName}`,
 		},
+
+		/**
+		 * Returns the translated label of the end time picker for a day name
+		 */
 		l10nEndPickerLabel: {
 			type: Function,
 			default: (dayName) => `Pick a end time for ${dayName}`,
 		},
 	},
+
+	emits: ['update:slots'],
+
 	data() {
 		return {
 			internalSlots: this.slotsToInternalData(this.slots),
 		}
 	},
+
 	watch: {
 		slots() {
 			this.internalSlots = this.slotsToInternalData(this.slots)
 		},
 	},
+
 	methods: {
 		timeStampSlotsToDateObjectSlots(slots) {
-			return slots.map(slot => ({
+			return slots.map((slot) => ({
 				start: new Date(slot.start * 1000),
 				end: new Date(slot.end * 1000),
 			}))
 		},
+
 		slotsToInternalData() {
 			const moToSa = [
 				{
@@ -204,16 +278,18 @@ export default {
 
 			return getFirstDay() === 1 ? [...moToSa, sunday] : [sunday, ...moToSa]
 		},
+
 		internalDataToSlots() {
 			const converted = {}
 			this.internalSlots.forEach(({ id, slots }) => {
-				converted[id] = slots.map(slot => ({
+				converted[id] = slots.map((slot) => ({
 					start: Math.round(slot.start.getTime() / 1000),
 					end: Math.round(slot.end.getTime() / 1000),
 				}))
 			})
 			return converted
 		},
+
 		addSlot(day) {
 			const start = new Date()
 			start.setHours(9, 0, 0, 0)
@@ -227,11 +303,13 @@ export default {
 
 			this.onChangeSlots()
 		},
+
 		removeSlot(day, idx) {
 			day.slots.splice(idx, 1)
 
 			this.onChangeSlots()
 		},
+
 		onChangeSlots() {
 			this.$emit('update:slots', this.internalDataToSlots())
 		},

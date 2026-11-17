@@ -2,24 +2,6 @@
   "name": "@nextcloud/calendar-availability-vue",
   "version": "3.0.0",
   "description": "Weekly calendar availability component for Nextcloud apps",
-  "type": "module",
-  "module": "dist/index.mjs",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs"
-    }
-  },
-  "scripts": {
-    "build": "vite build",
-    "watch": "vite build --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .js,.vue src",
-    "lint:fix": "eslint --ext .js,.vue src --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nextcloud/calendar-availability-vue.git"
-  },
   "keywords": [
     "nextcloud",
     "calendar",
@@ -27,12 +9,33 @@
     "availability",
     "rfc7953"
   ],
-  "author": "Christoph Wurst",
-  "license": "MIT",
+  "homepage": "https://github.com/nextcloud/calendar-availability-vue#readme",
   "bugs": {
     "url": "https://github.com/nextcloud/calendar-availability-vue/issues"
   },
-  "homepage": "https://github.com/nextcloud/calendar-availability-vue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextcloud/calendar-availability-vue.git"
+  },
+  "license": "MIT",
+  "author": "Christoph Wurst",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
+  },
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "vite build",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "vite build --watch"
+  },
+  "browserslist": [
+    "extends @nextcloud/browserslist-config"
+  ],
   "dependencies": {
     "@nextcloud/logger": "^3.0.3",
     "ical.js": "^2.2.1",
@@ -42,10 +45,11 @@
   },
   "devDependencies": {
     "@nextcloud/browserslist-config": "^3.1.2",
-    "@nextcloud/eslint-config": "^8.4.2",
+    "@nextcloud/eslint-config": "^9.0.1",
     "@nextcloud/l10n": "^1.4 || ^2.0 || ^3.0.0",
     "@nextcloud/vite-config": "^2.4.0",
     "@nextcloud/vue": "^9.9.0",
+    "eslint": "^10.15.0",
     "sass": "^1.108.2",
     "vite": "^6.4.3",
     "vue": "^3.5.17"
@@ -55,9 +59,6 @@
     "@nextcloud/vue": "^9.9.0",
     "vue": "^3.5.17"
   },
-  "browserslist": [
-    "extends @nextcloud/browserslist-config"
-  ],
   "engines": {
     "node": "^24.0.0",
     "npm": "^11.3.0"
